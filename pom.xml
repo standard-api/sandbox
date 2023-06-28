@@ -15,7 +15,7 @@
 	<description>sandbox</description>
 	<properties>
 		<java.version>17</java.version>
-		<stapi.version>0.0.18</stapi.version>
+		<stapi.version>0.0.20</stapi.version>
 	</properties>
 	<dependencies>
 		<dependency>
