@@ -15,6 +15,16 @@ services:
       - "8124:8124"
     networks:
       - stapi
+  stapi-admin:
+    image: standardapi/admin:1.0
+    environment:
+      - NEXT_PUBLIC_HOST_API=https://api-dev-minimal-v5.vercel.app
+      - NEXT_PUBLIC_ASSETS_API=https://api-dev-minimal-v5.vercel.app
+      - NEXT_PUBLIC_STAPI_SERVER=http://localhost:8080
+    ports:
+      - "3000:3000"
+    networks:
+      - stapi
 
 volumes:
   axon-server-eventstore-stapi:
