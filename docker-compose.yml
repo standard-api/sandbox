@@ -1,5 +1,22 @@
 version: "3.7"
 services:
+  app:
+    build:
+      dockerfile: ./docker/java/Dockerfile
+      context: .
+    entrypoint: ["/app/mvnw", "spring-boot:run"]
+    environment:
+      - FRONTEND_CLIENT=localhost:3000
+    volumes:
+      - .:/app
+      - ./storage/java-cache:/home/java/.m2
+    ports:
+      - "8080:8080"
+    depends_on:
+      - axon-server
+    networks:
+      - stapi
+
   axon-server:
     image: axoniq/axonserver
     environment:
