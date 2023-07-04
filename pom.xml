@@ -2,37 +2,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.1</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
 	<groupId>ai.stapi</groupId>
 	<artifactId>sandbox</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sandbox</name>
 	<description>sandbox</description>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.0.3</version>
+	</parent>
 	<properties>
 		<java.version>17</java.version>
 		<stapi.version>0.0.22-SNAPSHOT</stapi.version>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 		<dependency>
 			<groupId>ai.stapi</groupId>
 			<artifactId>axon-system-plugin</artifactId>
@@ -42,6 +28,12 @@
 			<groupId>ai.stapi</groupId>
 			<artifactId>graphql-api</artifactId>
 			<version>${stapi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ai.stapi</groupId>
+			<artifactId>axon-test</artifactId>
+			<version>${stapi.version}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	
@@ -64,5 +56,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
