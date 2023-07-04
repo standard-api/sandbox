@@ -6,4 +6,3 @@ while ! nc -z axon-server 8124; do
 done
 
 echo "Axon Server is ready, starting the application..."
-exec "/app/mvnw" "clean" "spring-boot:run" "$@"

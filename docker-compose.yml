@@ -4,7 +4,7 @@ services:
     build:
       dockerfile: ./docker/java/Dockerfile
       context: .
-    entrypoint: [ "/wait-for-axon.sh" ]
+    command: /bin/sh -c "/wait-for-axon.sh && /app/mvnw clean spring-boot:run"
     environment:
       - FRONTEND_CLIENT=localhost:3000
       - AXON_AXONSERVER_SERVERS=axon-server
@@ -23,7 +23,7 @@ services:
     build:
       dockerfile: ./docker/java/Dockerfile
       context: .
-    entrypoint: [ "/wait-for-axon.sh", "-Dspring-boot.run.arguments=system-model", "-Dspring-boot.run.profiles=generate-fixtures" ]
+    command: /bin/sh -c "/wait-for-axon.sh && /app/mvnw clean spring-boot:run -Dspring-boot.run.arguments=system-model -Dserver.port=8081 -Dspring-boot.run.profiles=generate-fixtures"
     environment:
       - AXON_AXONSERVER_SERVERS=axon-server
       - AXON_PORT=8124
