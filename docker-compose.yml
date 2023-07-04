@@ -19,6 +19,24 @@ services:
     networks:
       - stapi
 
+  fixtures:
+    build:
+      dockerfile: ./docker/java/Dockerfile
+      context: .
+    entrypoint: [ "/wait-for-axon.sh", "-Dspring-boot.run.arguments=system-model", "-Dspring-boot.run.profiles=generate-fixtures" ]
+    environment:
+      - AXON_AXONSERVER_SERVERS=axon-server
+      - AXON_PORT=8124
+    volumes:
+      - .:/app
+      - ./storage/java-cache:/home/java/.m2
+    ports:
+      - "8081:8081"
+    depends_on:
+      - axon-server
+    networks:
+      - stapi
+
   axon-server:
     image: axoniq/axonserver
     environment:
