@@ -1,5 +1,8 @@
-start:
+startd:
 	docker-compose up -d
+	
+start:
+	docker-compose up
 	
 start-services:
 	docker-compose up axon-server stapi-admin -d
