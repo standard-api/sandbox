@@ -4,9 +4,11 @@ services:
     build:
       dockerfile: ./docker/java/Dockerfile
       context: .
-    entrypoint: ["/app/mvnw", "spring-boot:run"]
+    entrypoint: [ "/wait-for-axon.sh" ]
     environment:
       - FRONTEND_CLIENT=localhost:3000
+      - AXON_AXONSERVER_SERVERS=axon-server
+      - AXON_PORT=8124
     volumes:
       - .:/app
       - ./storage/java-cache:/home/java/.m2
