@@ -4,7 +4,7 @@ services:
     build:
       dockerfile: ./docker/java/Dockerfile
       context: .
-    command: /bin/sh -c "/wait-for-axon.sh && /app/mvnw clean spring-boot:run"
+    command: /bin/sh -c "/app/mvnw clean spring-boot:run"
     environment:
       - FRONTEND_CLIENT=localhost:3000
       - AXON_AXONSERVER_SERVERS=axon-server
