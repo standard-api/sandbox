@@ -7,6 +7,9 @@ start:
 start-services:
 	docker-compose up axon-server stapi-admin -d
 
+start-be:
+	docker-compose up axon-server app
+
 stop:
 	docker-compose rm --stop --force
 
