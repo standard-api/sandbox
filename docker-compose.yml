@@ -53,7 +53,7 @@ services:
     networks:
       - stapi
   stapi-admin:
-    image: standardapi/admin:0.0.3
+    image: standardapi/admin:latest
     environment:
       - NEXT_PUBLIC_HOST_API=https://api-dev-minimal-v5.vercel.app
       - NEXT_PUBLIC_ASSETS_API=https://api-dev-minimal-v5.vercel.app
