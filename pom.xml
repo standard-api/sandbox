@@ -14,7 +14,7 @@
 	</parent>
 	<properties>
 		<java.version>17</java.version>
-		<stapi.version>0.0.22-SNAPSHOT</stapi.version>
+		<stapi.axon.version>0.0.22-SNAPSHOT</stapi.axon.version>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
@@ -22,17 +22,17 @@
 		<dependency>
 			<groupId>ai.stapi</groupId>
 			<artifactId>axon-system-plugin</artifactId>
-			<version>${stapi.version}</version>
+			<version>${stapi.axon.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>ai.stapi</groupId>
 			<artifactId>graphql-api</artifactId>
-			<version>${stapi.version}</version>
+			<version>${stapi.axon.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>ai.stapi</groupId>
 			<artifactId>axon-test</artifactId>
-			<version>${stapi.version}</version>
+			<version>${stapi.axon.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
