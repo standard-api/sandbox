@@ -52,6 +52,7 @@ services:
       - "8124:8124"
     networks:
       - stapi
+
   stapi-admin:
     image: standardapi/admin:latest
     environment:
@@ -63,9 +64,23 @@ services:
     networks:
       - stapi
 
+  arangodb:
+    image: arangodb:3.10.2
+    environment:
+      ARANGO_ROOT_PASSWORD: rootpassword
+    ports:
+      - 8555:8529
+    volumes:
+      - arangodb_data_container:/var/lib/arangodb3
+      - arangodb_apps_data_container:/var/lib/arangodb3-apps
+    networks:
+      - stapi
+
 volumes:
   axon-server-eventstore-stapi:
   axon-server-controldb-stapi:
+  arangodb_data_container:
+  arangodb_apps_data_container:
 
 networks:
   stapi:
