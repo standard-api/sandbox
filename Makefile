@@ -10,6 +10,9 @@ start-services:
 start-be:
 	docker-compose up axon-server app
 
+start-axon:
+	docker-compose up axon-server
+
 start-admin:
 	docker-compose up stapi-admin
 
