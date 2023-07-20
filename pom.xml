@@ -15,9 +15,9 @@
 	<properties>
 		<java.version>17</java.version>
 		<spring.boot.version>3.1.0</spring.boot.version>
-		<stapi.axon.version>0.0.25</stapi.axon.version>
-		<stapi.arango.version>0.0.1-SNAPSHOT</stapi.arango.version>
-		<stapi.core.version>0.1.4</stapi.core.version>
+		<stapi.axon.version>0.0.27</stapi.axon.version>
+		<stapi.arango.version>0.0.1</stapi.arango.version>
+		<stapi.core.version>0.1.7</stapi.core.version>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
