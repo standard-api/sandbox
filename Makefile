@@ -2,15 +2,18 @@ startd:
 	docker-compose up -d
 	
 start:
-	docker-compose up
+	docker-compose up axon-server arangodb stapi-admin app
 	
 start-services:
-	docker-compose up axon-server stapi-admin -d
+	docker-compose up axon-server arangodb stapi-admin -d
 
 start-be:
-	docker-compose up axon-server app
+	docker-compose up axon-server arangodb app
 
 start-axon:
+	docker-compose up axon-server
+
+start-arango:
 	docker-compose up axon-server
 
 start-admin:
