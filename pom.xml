@@ -14,10 +14,9 @@
 	</parent>
 	<properties>
 		<java.version>17</java.version>
-		<spring.boot.version>3.1.0</spring.boot.version>
-		<stapi.axon.version>0.0.25</stapi.axon.version>
-		<stapi.arango.version>0.0.1-SNAPSHOT</stapi.arango.version>
-		<stapi.core.version>0.1.4</stapi.core.version>
+		<spring.boot.version>3.2.0</spring.boot.version>
+		<stapi.axon.version>0.2.3</stapi.axon.version>
+		<stapi.arango.version>0.0.2</stapi.arango.version>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
@@ -29,6 +28,11 @@
 		</dependency>
 		<dependency>
 			<groupId>ai.stapi</groupId>
+			<artifactId>form-api</artifactId>
+			<version>${stapi.axon.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ai.stapi</groupId>
 			<artifactId>arango-axon</artifactId>
 			<version>${stapi.arango.version}</version>
 		</dependency>
@@ -36,11 +40,6 @@
 			<groupId>ai.stapi</groupId>
 			<artifactId>graphql-api</artifactId>
 			<version>${stapi.axon.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>ai.stapi</groupId>
-			<artifactId>form-api</artifactId>
-			<version>${stapi.core.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>ai.stapi</groupId>
